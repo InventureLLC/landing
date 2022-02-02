@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(20),
           child: Row(
             children: [
-              Image.asset('icons/Icon-192.png'),
+              Image.asset('images/Icon-192.png'),
               SizedBox(width: screenSize.width / 20),
               InkWell(
                 onTap: () {},
@@ -96,21 +96,63 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               'Too many paths in to Software Engineering?'
             ),
-            Text(
+            const Text(
               'Have your path automated for you on 1 platform'
             ),
-            TextButton(
+             TextButton(
               onPressed: () { },
-              child: Text(
+              child: const Text(
                 'Learn More'
               ),
-            )
+            ),
+            Row(
+              children: <Widget>[
+                const Image(
+                  image: AssetImage('images/community-mock.png'),
+                ),
+                Expanded(
+                  child:
+                Column(
+                  children:  <Widget>[
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.blueAccent,
+                      child: (
+                        const Text(
+                          'Community',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )
+                      ),
+                    ),
+                    // ignore: sized_box_for_whitespace
+                    Container(
+                      width: 100,
+                      height: 100,
+                      child: 
+                     const Text(
+                      'Interact and grow your skills with fellow students, mentors, and professionals within A-Star',
+                      style: TextStyle(
+                        fontSize: 48,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'Raleway',
+                        letterSpacing: 4,
+                      ),
+                    )
+                    ),
+                  ],
+                )),
+              ],
+            ),
           ],
+          
         ),
       ),
     );
