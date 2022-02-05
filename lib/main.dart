@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -117,32 +119,44 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(
                   child:
                 Column(
-                  children:  <Widget>[
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start ,
+                  textDirection: TextDirection.ltr,
+                  children: <Widget>[ 
+                    Column(
+                      children: [
+                        Image(
+                          image: AssetImage('images/community-icon.png')
+                        ),
+                      ]
+                    ),
                     Container(
-                      width: 100,
+                      width: 505,
+                      height: 66,
+                      child:
+                      Container(
+                      width: window.physicalSize.width / 2,
                       height: 100,
-                      color: Colors.blueAccent,
                       child: (
                         const Text(
                           'Community',
                           style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
+                            color: Colors.black,
+                            fontSize: 48,
                           ),
                         )
                       ),
                     ),
-                    // ignore: sized_box_for_whitespace
+                    ),
                     Container(
-                      width: 100,
-                      height: 100,
+                      width: 505,
                       child: 
-                     const Text(
+                      const Text(
                       'Interact and grow your skills with fellow students, mentors, and professionals within A-Star',
                       style: TextStyle(
-                        fontSize: 48,
+                        fontSize: 24,
                         fontWeight: FontWeight.w300,
-                        fontFamily: 'Raleway',
+                        fontFamily: 'Lato',
                         letterSpacing: 4,
                       ),
                     )
