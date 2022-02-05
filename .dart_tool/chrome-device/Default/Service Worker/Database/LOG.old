@@ -1,3 +1,4 @@
-2022/02/02-17:53:15.722 8e03 Reusing MANIFEST /private/var/folders/wb/t6mbkm5950l09lgtbznv8m2h0000gn/T/flutter_tools.r8uhzX/flutter_tools_chrome_device.462597/Default/Service Worker/Database/MANIFEST-000001
-2022/02/02-17:53:15.722 8e03 Recovering log #3
-2022/02/02-17:53:15.722 8e03 Reusing old log /private/var/folders/wb/t6mbkm5950l09lgtbznv8m2h0000gn/T/flutter_tools.r8uhzX/flutter_tools_chrome_device.462597/Default/Service Worker/Database/000003.log 
+2022/02/05-12:43:28.620 b603 Reusing MANIFEST /private/var/folders/wb/t6mbkm5950l09lgtbznv8m2h0000gn/T/flutter_tools.cxcKTy/flutter_tools_chrome_device.0hTPko/Default/Service Worker/Database/MANIFEST-000001
+2022/02/05-12:43:28.621 b603 Recovering log #3
+2022/02/05-12:43:28.621 b603 (ignoring error) /private/var/folders/wb/t6mbkm5950l09lgtbznv8m2h0000gn/T/flutter_tools.cxcKTy/flutter_tools_chrome_device.0hTPko/Default/Service Worker/Database/000003.log: dropping 2598 bytes; Corruption: checksum mismatch
+2022/02/05-12:43:28.621 b603 Reusing old log /private/var/folders/wb/t6mbkm5950l09lgtbznv8m2h0000gn/T/flutter_tools.cxcKTy/flutter_tools_chrome_device.0hTPko/Default/Service Worker/Database/000003.log 

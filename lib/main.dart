@@ -96,7 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: Center(
+      body:
+        Center(
         child: Column(
           children: <Widget>[
             const Text(
@@ -117,25 +118,28 @@ class _MyHomePageState extends State<MyHomePage> {
                   image: AssetImage('images/community-mock.png'),
                 ),
                 Expanded(
+                  child:  
+                  Padding( padding: const EdgeInsets.all(100), 
                   child:
-                Column(
+                  Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start ,
                   textDirection: TextDirection.ltr,
                   children: <Widget>[ 
-                    Column(
+                     Column(
                       children: [
-                        Image(
-                          image: AssetImage('images/community-icon.png')
-                        ),
+                          Image(
+                            width: screenSize.width / 2,
+                            image: const AssetImage('images/community-icon.png')
+                          )
+                        ,
                       ]
                     ),
                     Container(
-                      width: 505,
-                      height: 66,
+                      //width: screenSize.width / 2,
+                      //height: screenSize.height / 2,
                       child:
                       Container(
-                      width: window.physicalSize.width / 2,
                       height: 100,
                       child: (
                         const Text(
@@ -149,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     ),
                     Container(
-                      width: 505,
+                      width: screenSize.width / 2,
                       child: 
                       const Text(
                       'Interact and grow your skills with fellow students, mentors, and professionals within A-Star',
@@ -163,6 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 )),
+                 ),
               ],
             ),
           ],
