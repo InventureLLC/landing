@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:inventure_landing_page/widgets/marketing.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -51,23 +53,71 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
+    var children2 = <Widget>[
+            const Text('Too many paths in to Software Engineering?'),
+            const Text('Have your path automated for you on 1 platform'),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Learn More'),
+            ),
+            Row(
+              children: <Widget>[
+                FittedBox(
+                  fit: BoxFit.fill,
+                  child: Image.asset('images/community-mock.png'),
+                ),
+                Expanded(
+                  child: 
+                    Padding(
+                      padding: const EdgeInsets.all(100),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        textDirection: TextDirection.ltr,
+                        children: <Widget>[
+                          Column(children: [
+                            Image(
+                                image: const AssetImage(
+                                    'images/community-icon.png')),
+                          ]),
+                          //Container(
+                          //width: screenSize.width / 2,
+                          //height: screenSize.height / 2,
+                          //child:
+                          Container(
+                            height: 100,
+                            child: (const Text(
+                              'Community',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 48,
+                              ),
+                            )),
+                          ),
+                          //),
+                          Container(
+                              width: screenSize.width / 2,
+                              child: const Text(
+                                'Interact and grow your skills with fellow students, mentors, and professionals within A-Star',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w300,
+                                  fontFamily: 'Lato',
+                                  letterSpacing: 4,
+                                ),
+                              )),
+                        ],
+                      )
+                      ),
+                ),
+              ],
+            ),
+          ];
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 1000),
@@ -96,82 +146,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body:
-        Center(
+      body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[
-            const Text(
-              'Too many paths in to Software Engineering?'
-            ),
-            const Text(
-              'Have your path automated for you on 1 platform'
-            ),
-             TextButton(
-              onPressed: () { },
-              child: const Text(
-                'Learn More'
-              ),
-            ),
-            Row(
-              children: <Widget>[
-                const Image(
-                  image: AssetImage('images/community-mock.png'),
-                ),
-                Expanded(
-                  child:  
-                  Padding( padding: const EdgeInsets.all(100), 
-                  child:
-                  Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start ,
-                  textDirection: TextDirection.ltr,
-                  children: <Widget>[ 
-                     Column(
-                      children: [
-                          Image(
-                            width: screenSize.width / 2,
-                            image: const AssetImage('images/community-icon.png')
-                          )
-                        ,
-                      ]
-                    ),
-                    Container(
-                      //width: screenSize.width / 2,
-                      //height: screenSize.height / 2,
-                      child:
-                      Container(
-                      height: 100,
-                      child: (
-                        const Text(
-                          'Community',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 48,
-                          ),
-                        )
-                      ),
-                    ),
-                    ),
-                    Container(
-                      width: screenSize.width / 2,
-                      child: 
-                      const Text(
-                      'Interact and grow your skills with fellow students, mentors, and professionals within A-Star',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w300,
-                        fontFamily: 'Lato',
-                        letterSpacing: 4,
-                      ),
-                    )
-                    ),
-                  ],
-                )),
-                 ),
-              ],
-            ),
+          children: [
+            Marketing(heading: 'Community', subHeading: 'Hello world', isFlipped: false, image: const Image(image: AssetImage( 'images/community-mock.png'))),
+            Marketing(heading: 'Curated Paths', subHeading: 'Hello world', isFlipped: true, image: const Image(image: const AssetImage( 'images/community-mock.png'))),
+            Marketing(heading: 'Quality Feedback', subHeading: 'Hello world', isFlipped: false, image: const Image(image: const AssetImage( 'images/community-mock.png'))),
           ],
-          
         ),
       ),
     );
