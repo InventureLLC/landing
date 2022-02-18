@@ -11,8 +11,7 @@ class Marketing extends StatefulWidget {
       this.heading = 'null',
       this.subHeading = 'null',
       this.isFlipped = false,
-      this.image =  const Image(image: const AssetImage('assetName'))
-      })
+      this.image = const Image(image: const AssetImage('assetName'))})
       : super(key: key);
 
   @override
@@ -64,7 +63,9 @@ class _MarketingState extends State<Marketing> {
     ];
 
     return Row(
-      children: widget.isFlipped ? content.reversed.toList() : content,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: widget.isFlipped ? content.reversed.toList() : content.toList(),
     );
   }
 }
