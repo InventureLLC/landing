@@ -1,5 +1,6 @@
 #Ignored files
 .DS_Store
+.packages
 
 # Ignored folders
 .idea/
