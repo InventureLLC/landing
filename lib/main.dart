@@ -79,29 +79,23 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
-                        textDirection: TextDirection.ltr,
                         children: <Widget>[
-                          Column(children: [
-                            Image(
-                                image: const AssetImage(
-                                    'images/community-icon.png')),
+                          Column(children: const [
+                           Image(
+                                image: AssetImage('images/community-icon.png')
+                          ),
                           ]),
-                          //Container(
-                          //width: screenSize.width / 2,
-                          //height: screenSize.height / 2,
-                          //child:
-                          Container(
+                          const SizedBox(
                             height: 100,
-                            child: (const Text(
+                            child: Text(
                               'Community',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 48,
                               ),
-                            )),
-                          ),
-                          //),
-                          Container(
+                            )
+                            ),
+                          SizedBox(
                               width: screenSize.width / 2,
                               child: const Text(
                                 'Interact and grow your skills with fellow students, mentors, and professionals within A-Star',
