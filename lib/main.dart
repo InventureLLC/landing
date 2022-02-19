@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:inventure_landing_page/widgets/marketing.dart';
 import 'package:inventure_landing_page/widgets/notify.dart';
+import 'package:inventure_landing_page/widgets/footer.dart';
 
 
 void main() {
@@ -143,11 +144,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
-            Marketing(heading: 'Community', subHeading: 'Interact and grow your skills with fellow students, mentors, and professionals within A-Star', isFlipped: false, image: const Image(image: AssetImage( 'images/community-mock.png'))),
-            Marketing(heading: 'Curated Paths', subHeading: 'Follow A star\'s AI tailored path that turns your novice programming knowledge well suited for full time positions', isFlipped: true, image: const Image(image: const AssetImage( 'images/pathways.png'))),
-            Marketing(heading: 'Quality Feedback', subHeading: 'Fast learning comes from quick and transparent feedback. ', isFlipped: false, image: const Image(image: const AssetImage( 'images/community-mock.png'))),
-            Notify(),
+          children: const <Widget> [
+             Marketing(heading: 'Community', subHeading: 'Interact and grow your skills with fellow students, mentors, and professionals within A-Star', isFlipped: false, image: const Image(image: AssetImage( 'images/community-mock.png'))),
+             Marketing(heading: 'Curated Paths', subHeading: 'Follow A star\'s AI tailored path that turns your novice programming knowledge well suited for full time positions', isFlipped: true, image: const Image(image: const AssetImage( 'images/pathways.png'))),
+             Marketing(heading: 'Quality Feedback', subHeading: 'Fast learning comes from quick and transparent feedback. ', isFlipped: false, image: const Image(image: const AssetImage( 'images/community-mock.png'))),
+             Notify(),
+             Footer(),
           ],
         ),
       ),
