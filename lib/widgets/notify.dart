@@ -32,6 +32,7 @@ class _NotifyState extends State<Notify> {
     return Padding(
       padding: const EdgeInsets.all(100),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget> [
         const Text(
           'Get notified when we launch.',
@@ -43,51 +44,42 @@ class _NotifyState extends State<Notify> {
           child: 
               Form(
                 key: _formKey,
-                child: 
-                SizedBox(
-                width: double.infinity,
-                child:
-                  Center(
-                  child:
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget> [
-                        const SizedBox(
-                          width: 460,
-                          height: 70, 
-                          child: TextField(
-                            style: TextStyle(
-                              fontFamily: 'Lato',
-                            ),
-                            decoration: InputDecoration(
-                            labelText: 'Enter your email',
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color.fromRGBO(49, 113, 104, 1),
-                              ),
-                              )
-                            ),
-                          ),
-                            ),
-                        const SizedBox(width: 20),
-                        SizedBox(
-                          width: 126,
-                          height: 57,
-                          child: 
-                            ElevatedButton(
-                              child: 
-                                const Center( 
-                                    child: Text('Notify me')
+                    child:
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget> [
+                            const SizedBox(
+                              width: 460,
+                              child: TextField(
+                                style: TextStyle(
+                                  fontFamily: 'Lato',
                                 ),
-                              onPressed: () {},
-                              style: buttonStyle,
-                            )
-                        ),
-                      ],
-                    )),
-                )
-            ),
-          ),
+                                decoration: InputDecoration(
+                                labelText: 'Enter your email',
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color.fromRGBO(49, 113, 104, 1),
+                                  ),
+                                  )
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 57,
+                              child: 
+                                ElevatedButton(
+                                  child: 
+                                    const Center( 
+                                        child: Text('Notify me')
+                                    ),
+                                  onPressed: () {},
+                                  style: buttonStyle,
+                                )
+                            ),
+                          ],
+                        )
+                      ),
+        ) 
       ]),
     );
   }

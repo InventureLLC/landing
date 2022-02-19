@@ -1,0 +1,8 @@
+#Ignored files
+.DS_Store
+
+# Ignored folders
+.idea/
+.vscode/
+.dart_tool/
+build/

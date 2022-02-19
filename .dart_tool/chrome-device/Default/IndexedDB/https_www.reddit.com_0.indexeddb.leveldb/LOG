@@ -1,7 +1,0 @@
-2022/02/05-15:40:30.963 d127 Reusing MANIFEST /private/var/folders/wb/t6mbkm5950l09lgtbznv8m2h0000gn/T/flutter_tools.8TovLV/flutter_tools_chrome_device.y11lfa/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/02/05-15:40:30.963 d127 Recovering log #3
-2022/02/05-15:40:30.963 d127 Reusing old log /private/var/folders/wb/t6mbkm5950l09lgtbznv8m2h0000gn/T/flutter_tools.8TovLV/flutter_tools_chrome_device.y11lfa/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000003.log 
-2022/02/05-15:41:34.019 d127 Level-0 table #5: started
-2022/02/05-15:41:34.042 d127 Level-0 table #5: 2229 bytes OK
-2022/02/05-15:41:34.079 d127 Delete type=0 #3
-2022/02/05-15:41:34.080 d127 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
