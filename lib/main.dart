@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(20),
           child: Row(
             children: [
-              SizedBox(width: screenSize.width / 20),
+              const Image(image: AssetImage('images/logo.png'),),
               InkWell(
                 onTap: () {},
                 child: Text(
@@ -66,14 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'Too many paths in to Software Engineering?',
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.headline1
+                  ?.copyWith(fontWeight: FontWeight.w400),
             ),
             Text(
               'Have your path automated for you on 1 platform',
               style: Theme.of(context).textTheme.headline1
                   ?.copyWith(color: Theme.of(context).primaryColor),
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: () { },
               child: Text(
                 'Learn More',
