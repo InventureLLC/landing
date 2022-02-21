@@ -1,4 +1,8 @@
+// import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:inventure_landing_page/widgets/marketing.dart';
+import 'package:inventure_landing_page/widgets/notify.dart';
+
 import 'package:inventure_landing_page/theme/AppTheme.dart';
 
 void main() {
@@ -32,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 1000),
@@ -60,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -80,7 +83,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Learn More',
                 style: Theme.of(context).textTheme.button,
               ),
-            )
+            ),
+            const Marketing(heading: 'Community', subHeading: 'Interact and grow your skills with fellow students, mentors, and professionals within A-Star', isFlipped: false, image: Image(image: AssetImage( 'images/community-mock.png'))),
+            const Marketing(heading: 'Curated Paths', subHeading: 'Follow A star\'s AI tailored path that turns your novice programming knowledge well suited for full time positions', isFlipped: true, image: Image(image: AssetImage( 'images/pathways.png'))),
+            const Marketing(heading: 'Quality Feedback', subHeading: 'Fast learning comes from quick and transparent feedback. ', isFlipped: false, image: Image(image: AssetImage( 'images/community-mock.png'))),
+            const Notify(),
           ],
         ),
       ),

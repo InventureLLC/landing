@@ -1,2 +1,12 @@
+#Ignored files
+.DS_Store
+.packages
+.packages~main
+.flutter-plugins
+.flutter-plugins-dependencies
 
-.idea/workspace.xml
+# Ignored folders
+.idea/
+.vscode/
+.dart_tool/
+build/
