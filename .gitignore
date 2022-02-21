@@ -1,6 +1,9 @@
 #Ignored files
 .DS_Store
 .packages
+.packages~main
+.flutter-plugins
+.flutter-plugins-dependencies
 
 # Ignored folders
 .idea/

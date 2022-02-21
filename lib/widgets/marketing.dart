@@ -11,7 +11,7 @@ class Marketing extends StatefulWidget {
       this.heading = 'null',
       this.subHeading = 'null',
       this.isFlipped = false,
-      this.image = const Image(image: const AssetImage('assetName'))})
+      this.image = const Image(image:  AssetImage('assetName'))})
       : super(key: key);
 
   @override
@@ -19,6 +19,7 @@ class Marketing extends StatefulWidget {
 }
 
 class _MarketingState extends State<Marketing> {
+  @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     List<Widget> content = [
@@ -34,14 +35,14 @@ class _MarketingState extends State<Marketing> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 textDirection: TextDirection.ltr,
                 children: <Widget>[
-                  Column(children: [
-                    Image(image: const AssetImage('images/community-icon.png')),
+                  Column(children: const [
+                    Image(image:  AssetImage('images/community-icon.png')),
                   ]),
                   SizedBox(
                     height: 100,
                     child: (Text(
                       widget.heading,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 48,
                       ),
@@ -51,7 +52,7 @@ class _MarketingState extends State<Marketing> {
                       width: screenSize.width / 2,
                       child: Text(
                         widget.subHeading,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w300,
                           fontFamily: 'Lato',
