@@ -11,7 +11,7 @@ class Marketing extends StatefulWidget {
       this.heading = 'null',
       this.subHeading = 'null',
       this.isFlipped = false,
-      this.image = const Image(image:  AssetImage('assetName'))})
+      this.image = const Image(image: AssetImage('assetName'))})
       : super(key: key);
 
   @override
@@ -36,7 +36,7 @@ class _MarketingState extends State<Marketing> {
                 textDirection: TextDirection.ltr,
                 children: <Widget>[
                   Column(children: const [
-                    Image(image:  AssetImage('images/community-icon.png')),
+                    Image(image: AssetImage('images/community-icon.png')),
                   ]),
                   SizedBox(
                     height: 100,

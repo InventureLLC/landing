@@ -1,9 +1,8 @@
 // import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:inventure_landing_page/theme/appTheme.dart';
 import 'package:inventure_landing_page/widgets/marketing.dart';
 import 'package:inventure_landing_page/widgets/notify.dart';
-
-import 'package:inventure_landing_page/theme/AppTheme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(20),
           child: Row(
             children: [
-              const Image(image: AssetImage('images/logo.png'),),
+              const Image(
+                image: AssetImage('images/logo.png'),
+              ),
               InkWell(
                 onTap: () {},
                 child: Text(
@@ -69,24 +70,43 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'Too many paths in to Software Engineering?',
-              style: Theme.of(context).textTheme.headline1
+              style: Theme.of(context)
+                  .textTheme
+                  .headline1
                   ?.copyWith(fontWeight: FontWeight.w400),
             ),
             Text(
               'Have your path automated for you on 1 platform',
-              style: Theme.of(context).textTheme.headline1
+              style: Theme.of(context)
+                  .textTheme
+                  .headline1
                   ?.copyWith(color: Theme.of(context).primaryColor),
             ),
             ElevatedButton(
-              onPressed: () { },
+              onPressed: () {},
               child: Text(
                 'Learn More',
                 style: Theme.of(context).textTheme.button,
               ),
             ),
-            const Marketing(heading: 'Community', subHeading: 'Interact and grow your skills with fellow students, mentors, and professionals within A-Star', isFlipped: false, image: Image(image: AssetImage( 'images/community-mock.png'))),
-            const Marketing(heading: 'Curated Paths', subHeading: 'Follow A star\'s AI tailored path that turns your novice programming knowledge well suited for full time positions', isFlipped: true, image: Image(image: AssetImage( 'images/pathways.png'))),
-            const Marketing(heading: 'Quality Feedback', subHeading: 'Fast learning comes from quick and transparent feedback. ', isFlipped: false, image: Image(image: AssetImage( 'images/community-mock.png'))),
+            const Marketing(
+                heading: 'Community',
+                subHeading:
+                    'Interact and grow your skills with fellow students, mentors, and professionals within A-Star',
+                isFlipped: false,
+                image: Image(image: AssetImage('images/community-mock.png'))),
+            const Marketing(
+                heading: 'Curated Paths',
+                subHeading:
+                    'Follow A star\'s AI tailored path that turns your novice programming knowledge well suited for full time positions',
+                isFlipped: true,
+                image: Image(image: AssetImage('images/pathways.png'))),
+            const Marketing(
+                heading: 'Quality Feedback',
+                subHeading:
+                    'Fast learning comes from quick and transparent feedback. ',
+                isFlipped: false,
+                image: Image(image: AssetImage('images/community-mock.png'))),
             const Notify(),
           ],
         ),

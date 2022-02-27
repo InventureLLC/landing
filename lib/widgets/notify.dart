@@ -14,12 +14,12 @@ class _NotifyState extends State<Notify> {
     shadowColor: const Color.fromRGBO(49, 113, 104, 1),
     textStyle: const TextStyle(
       color: Colors.white,
-      fontFamily: 'Lato', 
+      fontFamily: 'Lato',
       fontSize: 18,
       fontWeight: FontWeight.w500,
     ),
     elevation: 10,
-    shape:  RoundedRectangleBorder(
+    shape: RoundedRectangleBorder(
       side: const BorderSide(
         color: Color.fromRGBO(49, 113, 104, 1),
       ),
@@ -31,55 +31,48 @@ class _NotifyState extends State<Notify> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(100),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: <Widget> [
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
         const Text(
           'Get notified when we launch.',
           style: TextStyle(
-              fontSize: 48, fontWeight: FontWeight.bold, color: Colors.black, fontFamily: 'Raleway'),
+              fontSize: 48,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+              fontFamily: 'Raleway'),
         ),
         FractionallySizedBox(
           widthFactor: 0.5,
-          child: 
-              Form(
-                key: _formKey,
-                    child:
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget> [
-                            const SizedBox(
-                              width: 460,
-                              child: TextField(
-                                style: TextStyle(
-                                  fontFamily: 'Lato',
-                                ),
-                                decoration: InputDecoration(
-                                labelText: 'Enter your email',
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color.fromRGBO(49, 113, 104, 1),
-                                  ),
-                                  )
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 57,
-                              child: 
-                                ElevatedButton(
-                                  child: 
-                                    const Center( 
-                                        child: Text('Notify me')
-                                    ),
-                                  onPressed: () {},
-                                  style: buttonStyle,
-                                )
-                            ),
-                          ],
-                        )
+          child: Form(
+              key: _formKey,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  const SizedBox(
+                    width: 460,
+                    child: TextField(
+                      style: TextStyle(
+                        fontFamily: 'Lato',
                       ),
-        ) 
+                      decoration: InputDecoration(
+                          labelText: 'Enter your email',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromRGBO(49, 113, 104, 1),
+                            ),
+                          )),
+                    ),
+                  ),
+                  SizedBox(
+                      height: 57,
+                      child: ElevatedButton(
+                        child: const Center(child: Text('Notify me')),
+                        onPressed: () {},
+                        style: buttonStyle,
+                      )),
+                ],
+              )),
+        )
       ]),
     );
   }
