@@ -1,4 +1,4 @@
-# inventure_landing_page
+# Landing page
 
 Landing page of A-Star
 
