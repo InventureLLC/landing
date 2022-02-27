@@ -54,7 +54,7 @@ class _MarketingState extends State<Marketing> {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w300,
-                          fontFamily: 'Lato',
+                          fontFamily: "Lato",
                           letterSpacing: 4,
                         ),
                       )),
